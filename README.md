@@ -56,6 +56,8 @@ This project follows a **fully automated data pipeline** that runs daily at **6:
 ---
 
 ## ⚙️ **Key Features in Power BI Report** 📊 
+![Report overall stats](https://github.com/KirandeepMarala/T-Series-Data-Engineering-Analytics/blob/main/Images/dashboard_stats_page.png) 
+![Report overall info](https://github.com/KirandeepMarala/T-Series-Data-Engineering-Analytics/blob/main/Images/dashboard_overall_info.png) 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✔️ Overall Channel Performance – Total Views, Likes, Comments, and Published Videos.  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✔️ Shorts vs. Full-Length Videos – Comparative performance analysis.  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✔️ Top 7 Trending Videos – Based on selected time periods.  
