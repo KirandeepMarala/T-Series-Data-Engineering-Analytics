@@ -63,7 +63,7 @@ This project follows a **fully automated data pipeline** that runs daily at **6:
   ✔️ Channel Selection – Analyze data for **6 T-Series channels** individually or collectively.  
   ✔️ Engagement Metrics – Detailed insights into **views, likes, comments, and content duration (minutes)**.  
 
-  🔗 **Live Interactive Report:** [Click Here to View Power BI Dashboard](YOUR_POWERBI_REPORT_LINK)  
+  🔗 **Live Interactive Report:** [Click Here to View Power BI Report](YOUR_POWERBI_REPORT_LINK)  
 
 
 ---
@@ -77,5 +77,41 @@ This project follows a **fully automated data pipeline** that runs daily at **6:
 ✅ **Time-based Trend Analysis** (Daily, Weekly, Monthly stats).  
 ✅ **Power BI Dynamic Filtering** (By channel, content type, and date range).  
 ✅ **Scalability** – Can be extended to include more YouTube channels.  
+
+---
+
+
+## 📜 How to Run This Project
+
+1. **Clone the Repository:**
+```bash
+git clone https://github.com/KirandeepMarala/T-Series-Data-Engineering-Analytics
+ ```
+2. **Set Up AWS Lambda & S3:**:
+- Deploy the Lambda function to AWS.
+- Configure AWS EventBridge for scheduling at 6:30 AM & PM IST.
+- Ensure S3 bucket permissions allow Snowflake to read data.
+     
+3. **Set Up Snowflake Data Warehouse:**
+- Create a table to store YouTube analytics data.
+- Configure auto-ingestion from AWS S3.
+     
+7. **Connect Power BI to Snowflake:**:
+- Use Power BI Desktop → Get Data → Snowflake Connector.
+- Load data & create visualizations. 
+---
+
+## 🎯 Conclusion
+This project showcases a scalable & automated data engineering pipeline for YouTube analytics. With AWS, Snowflake, and Power BI, we built a robust & efficient system to track YouTube performance metrics across multiple T-Series channels.
+
+Feel free to reach out for any questions or suggestions! 😊
+
+---
+
+## 📬 Contact
+
+- **Author**: [kirandeep Marala](#)
+- **Email**: [kirandeep.marala@gmail.com](mailto:kirandeep.marala@gmail.com)
+- **LinkedIn**: [My LinkedIn Profile](https://www.linkedin.com/in/kirandeepmarala/)
 
 ---
