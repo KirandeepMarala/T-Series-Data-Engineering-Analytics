@@ -1,2 +1,88 @@
-# T-Series-Data-Engineering-Analytics
-In this project, we are analysing T-Series youtube channels by building complete ETL pipelines
+# **T-Series Data Engineering Analytics** ▶️🎵📊  
+
+## 📖 **Overview**  
+This project is an **end-to-end data engineering solution** for analyzing YouTube channels under the **T-Series Universe**. It automates data extraction, processing, warehousing, and visualization, providing deep insights into **views, likes, comments, content duration, and top-performing videos**.  
+
+The final output is an interactive **Power BI report**, enabling users to analyze YouTube content trends over different time periods.  
+
+---
+
+## 📁 **Data Source**  
+- **Data Source:** YouTube API  
+- **Channels Covered:**  
+  - 📺 T-Series Hindi  
+  - 📺 T-Series Telugu  
+  - 📺 T-Series Tamil  
+  - 📺 T-Series Kannada  
+  - 📺 T-Series Malayalam  
+  - 📺 T-Series Bhakti Sagar  
+- **Time Period:** Data is collected daily from **January 2022** to the present.  
+
+---
+
+## 🛠️ **Tech Stack & Tools Used**  
+
+| **Category**       | **Tools Used**  |
+|-------------------|---------------|
+| **Data Extraction** | YouTube API, AWS Lambda  |
+| **Data Scheduling** | AWS EventBridge (CloudWatch)  |
+| **Data Storage** | AWS S3 (CSV Files)  |
+| **Data Warehousing** | Snowflake  |
+| **Data Visualization** | Power BI  |
+| **Programming Language** | Python  |
+
+---
+
+## 📊 **Project Architecture & Pipeline**  
+![Architecture of the data pipeline](https://github.com/KirandeepMarala/Olympics-azure-data-engineering-project/blob/main/Images/pipeline.gif) 
+
+This project follows a **fully automated data pipeline** that runs daily at **6:30 AM & 6:30 PM IST**.  
+
+### **Data Flow Steps:**  
+
+1. **Data Fetching**:  
+   - YouTube API fetches **daily stats** on views, likes, comments, and published videos for 6 T-Series channels.
+2. **AWS Lambda Execution**:
+   - A Python script runs in **AWS Lambda**, processes, and cleans the data.
+3. **AWS EventBridge Trigger**:  
+   - The Lambda function is triggered **daily at 6:30 AM & 6:30 PM IST** using **AWS EventBridge (CloudWatch)**.  
+4. **Data Storage in AWS S3**:  
+   - The processed data is stored as **CSV files** in an Amazon S3 bucket.  
+5. **Data Ingestion into Snowflake**:  
+   - The **Object Put event** in S3 triggers **Snowflake**, which automatically ingests the new data into a structured table.  
+6. **Power BI Visualization**:  
+   - The Power BI dashboard updates **twice daily at 7:00 AM & 7:00 PM IST**, fetching fresh data from Snowflake.  
+
+---
+
+## ⚙️ **Key Features in Power BI Report** 📊 
+  ✔️ `Overall Channel Performance` – Total Views, Likes, Comments, and Published Videos.  
+  ✔️ `Shorts vs. Full-Length Videos` – Comparative performance analysis.  
+  ✔️ `Top 7 Trending Videos` – Based on selected time periods.  
+  ✔️ `Time-Based Filtering` – View data for **L7D, L30D, L60D, L3M, L6M, L12M, L24M, or All Time**.  
+  ✔️ `Channel Selection` – Analyze data for **6 T-Series channels** individually or collectively.  
+  ✔️ `Engagement Metrics` – Detailed insights into **views, likes, comments, and content duration (minutes)**.  
+
+  🔗 **Live Interactive Report:** [Click Here to View Power BI Dashboard](YOUR_POWERBI_REPORT_LINK)  
+
+
+---
+
+## 🚀 **Key Functionalities**  
+
+✅ **Automated Data Pipeline** (Runs twice daily at **6:30 AM & 6:30 PM IST**).  
+✅ **YouTube API Integration** for real-time analytics.  
+✅ **AWS Lambda & EventBridge** for serverless processing.  
+✅ **AWS S3 & Snowflake** for scalable data storage.  
+✅ **Time-based Trend Analysis** (Daily, Weekly, Monthly stats).  
+✅ **Power BI Dynamic Filtering** (By channel, content type, and date range).  
+✅ **Scalability** – Can be extended to include more YouTube channels.  
+
+---
+
+## 📜 **How to Run This Project**  
+
+### **1️⃣ Clone the Repository:**  
+```bash
+git clone https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPO_NAME.git
+cd YOUR_REPO_NAME
