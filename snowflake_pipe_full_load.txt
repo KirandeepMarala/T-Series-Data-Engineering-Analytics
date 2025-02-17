@@ -1,0 +1,90 @@
+// create database, schemas and connections
+create or replace database youtube_analytics_data;
+create or replace schema external_stages;
+create or replace schema external_integrations;
+create or replace schema file_formats;
+create or replace schema pipes;
+
+Use Schema external_integrations;
+
+
+CREATE Or Replace STORAGE INTEGRATION s3_connection
+    TYPE = EXTERNAL_STAGE
+    STORAGE_PROVIDER = S3
+    ENABLED =TRUE
+    STORAGE_AWS_ROLE_ARN = 'mention_your_role_arn'
+    STORAGE_ALLOWED_LOCATIONS = ('s3://t-series-youtube-analytics')
+        COMMENT = 'Creating connection to S3';
+
+Desc integration s3_connection;
+
+
+----------------------------------------------------
+// Create the table
+CREATE OR REPLACE TABLE YOUTUBE_ANALYTICS_DATA.PUBLIC.t_series_youtube_data (
+    video_id STRING,
+    published_at TIMESTAMP_NTZ, 
+    title STRING,
+    duration STRING, 
+    content_type STRING, 
+    tags STRING, 
+    video_link STRING, 
+    description STRING, 
+    thumbnails STRING, 
+    view_count INT, 
+    like_count INT, 
+    comment_count INT, 
+    channel_name STRING, 
+    inserted_at TIMESTAMP_NTZ
+);
+
+
+// Create the File format
+CREATE OR REPLACE FILE FORMAT YOUTUBE_ANALYTICS_DATA.FILE_FORMATS.csv_fileformat
+TYPE = 'CSV'
+FIELD_DELIMITER = ','
+FIELD_OPTIONALLY_ENCLOSED_BY = '"',
+SKIP_HEADER = 1
+null_if = ('NULL', 'null')
+empty_field_as_null = True;
+
+
+// Create the stage
+create or replace stage YOUTUBE_ANALYTICS_DATA.EXTERNAL_STAGES.csv_folder
+    url = 's3://t-series-youtube-analytics/raw_data/'
+    STORAGE_INTEGRATION = s3_connection
+    FILE_FORMAT = YOUTUBE_ANALYTICS_DATA.FILE_FORMATS.csv_fileformat
+
+
+// list all the files in the stagged folder    
+list @YOUTUBE_ANALYTICS_DATA.EXTERNAL_STAGES.csv_folder
+
+
+// create the pipe
+CREATE or replace PIPE YOUTUBE_ANALYTICS_DATA.PIPES.youtube_ingest_pipe
+    AUTO_INGEST = TRUE
+    AS
+    COPY INTO YOUTUBE_ANALYTICS_DATA.PUBLIC.t_series_youtube_data
+    FROM @YOUTUBE_ANALYTICS_DATA.EXTERNAL_STAGES.csv_folder;
+
+
+// describe the pipe
+DESC pipe YOUTUBE_ANALYTICS_DATA.PIPES.youtube_ingest_pipe;
+
+
+// Test the data
+-- select count(*) from YOUTUBE_ANALYTICS_DATA.PUBLIC.T_SERIES_YOUTUBE_DATA;
+-- select * from YOUTUBE_ANALYTICS_DATA.PUBLIC.T_SERIES_YOUTUBE_DATA;
+-- select * from YOUTUBE_ANALYTICS_DATA.PUBLIC.T_SERIES_YOUTUBE_DATA 
+-- where inserted_at = (select Max(inserted_at) from YOUTUBE_ANALYTICS_DATA.PUBLIC.T_SERIES_YOUTUBE_DATA);
+
+
+
+-- Select MAX(inserted_at) from YOUTUBE_ANALYTICS_DATA.PUBLIC.T_SERIES_YOUTUBE_DATA;
+
+-- SHOW PIPES;
+-- ALTER PIPE YOUTUBE_ANALYTICS_DATA.PIPES.youtube_ingest_pipe SET PIPE_EXECUTION_PAUSED = FALSE;
+-- SELECT SYSTEM$PIPE_STATUS('YOUTUBE_ANALYTICS_DATA.PIPES.youtube_ingest_pipe');
+
+
+-- TRUNCATE TABLE YOUTUBE_ANALYTICS_DATA.PUBLIC.T_SERIES_YOUTUBE_DATA;
