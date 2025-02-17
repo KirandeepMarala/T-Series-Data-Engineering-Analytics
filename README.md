@@ -56,12 +56,12 @@ This project follows a **fully automated data pipeline** that runs daily at **6:
 ---
 
 ## ⚙️ **Key Features in Power BI Report** 📊 
-  ✔️ Overall Channel Performance – Total Views, Likes, Comments, and Published Videos.  
-  ✔️ Shorts vs. Full-Length Videos – Comparative performance analysis.  
-  ✔️ Top 7 Trending Videos – Based on selected time periods.  
-  ✔️ Time-Based Filtering – View data for **L7D, L30D, L60D, L3M, L6M, L12M, L24M, or All Time**.  
-  ✔️ Channel Selection – Analyze data for **6 T-Series channels** individually or collectively.  
-  ✔️ Engagement Metrics – Detailed insights into **views, likes, comments, and content duration (minutes)**.  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✔️ Overall Channel Performance – Total Views, Likes, Comments, and Published Videos.  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✔️ Shorts vs. Full-Length Videos – Comparative performance analysis.  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✔️ Top 7 Trending Videos – Based on selected time periods.  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✔️ Time-Based Filtering – View data for **L7D, L30D, L60D, L3M, L6M, L12M, L24M, or All Time**.  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✔️ Channel Selection – Analyze data for **6 T-Series channels** individually or collectively.  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✔️ Engagement Metrics – Detailed insights into **views, likes, comments, and content duration (minutes)**.  
 
   🔗 **Live Interactive Report:** [Click Here to View Power BI Report](YOUR_POWERBI_REPORT_LINK)  
 
@@ -70,13 +70,13 @@ This project follows a **fully automated data pipeline** that runs daily at **6:
 
 ## 🚀 **Key Functionalities**  
 
-✅ **Automated Data Pipeline** (Runs twice daily at **6:30 AM & 6:30 PM IST**).  
-✅ **YouTube API Integration** for real-time analytics.  
-✅ **AWS Lambda & EventBridge** for serverless processing.  
-✅ **AWS S3 & Snowflake** for scalable data storage.  
-✅ **Time-based Trend Analysis** (Daily, Weekly, Monthly stats).  
-✅ **Power BI Dynamic Filtering** (By channel, content type, and date range).  
-✅ **Scalability** – Can be extended to include more YouTube channels.  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✅ **Automated Data Pipeline** (Runs twice daily at **6:30 AM & 6:30 PM IST**).  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✅ **YouTube API Integration** for real-time analytics.  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✅ **AWS Lambda & EventBridge** for serverless processing.  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✅ **AWS S3 & Snowflake** for scalable data storage.  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✅ **Time-based Trend Analysis** (Daily, Weekly, Monthly stats).  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✅ **Power BI Dynamic Filtering** (By channel, content type, and date range).  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✅ **Scalability** – Can be extended to include more YouTube channels.  
 
 ---
 
@@ -88,17 +88,18 @@ This project follows a **fully automated data pipeline** that runs daily at **6:
 git clone https://github.com/KirandeepMarala/T-Series-Data-Engineering-Analytics
  ```
 2. **Set Up AWS Lambda & S3:**:
-- Deploy the Lambda function to AWS.
-- Configure AWS EventBridge for scheduling at 6:30 AM & PM IST.
-- Ensure S3 bucket permissions allow Snowflake to read data.
-     
+   - Deploy the Lambda function to AWS.
+   - Configure AWS EventBridge for scheduling at 6:30 AM & PM IST.
+   - Ensure S3 bucket permissions allow Snowflake to read data.
+    
 3. **Set Up Snowflake Data Warehouse:**
-- Create a table to store YouTube analytics data.
-- Configure auto-ingestion from AWS S3.
-     
-7. **Connect Power BI to Snowflake:**:
-- Use Power BI Desktop → Get Data → Snowflake Connector.
-- Load data & create visualizations. 
+   - Create a table to store YouTube analytics data.
+   - Configure auto-ingestion from AWS S3.
+    
+4. **Connect Power BI to Snowflake:**:
+   - Use Power BI Desktop → Get Data → Snowflake Connector.
+   - Load data & create visualizations.
+    
 ---
 
 ## 🎯 Conclusion
