@@ -34,7 +34,7 @@ The final output is an interactive **Power BI report**, enabling users to analyz
 ---
 
 ## 📊 **Project Architecture & Pipeline**  
-![Architecture of the data pipeline](https://github.com/KirandeepMarala/T-Series-Data-Engineering-Analytics/blob/main/Images/pipeline.gif) 
+![Architecture of the data pipeline](https://github.com/KirandeepMarala/T-Series-Data-Engineering-Analytics/blob/main/Images/youtube_analytics_architecture_pipeline.jpg) 
 
 This project follows a **fully automated data pipeline** that runs daily at **6:30 AM & 6:30 PM IST**.  
 
