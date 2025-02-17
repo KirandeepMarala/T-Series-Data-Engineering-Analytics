@@ -56,12 +56,12 @@ This project follows a **fully automated data pipeline** that runs daily at **6:
 ---
 
 ## ⚙️ **Key Features in Power BI Report** 📊 
-  ✔️ `Overall Channel Performance` – Total Views, Likes, Comments, and Published Videos.  
-  ✔️ `Shorts vs. Full-Length Videos` – Comparative performance analysis.  
-  ✔️ `Top 7 Trending Videos` – Based on selected time periods.  
-  ✔️ `Time-Based Filtering` – View data for **L7D, L30D, L60D, L3M, L6M, L12M, L24M, or All Time**.  
-  ✔️ `Channel Selection` – Analyze data for **6 T-Series channels** individually or collectively.  
-  ✔️ `Engagement Metrics` – Detailed insights into **views, likes, comments, and content duration (minutes)**.  
+  ✔️ Overall Channel Performance – Total Views, Likes, Comments, and Published Videos.  
+  ✔️ Shorts vs. Full-Length Videos – Comparative performance analysis.  
+  ✔️ Top 7 Trending Videos – Based on selected time periods.  
+  ✔️ Time-Based Filtering – View data for **L7D, L30D, L60D, L3M, L6M, L12M, L24M, or All Time**.  
+  ✔️ Channel Selection – Analyze data for **6 T-Series channels** individually or collectively.  
+  ✔️ Engagement Metrics – Detailed insights into **views, likes, comments, and content duration (minutes)**.  
 
   🔗 **Live Interactive Report:** [Click Here to View Power BI Dashboard](YOUR_POWERBI_REPORT_LINK)  
 
@@ -79,10 +79,3 @@ This project follows a **fully automated data pipeline** that runs daily at **6:
 ✅ **Scalability** – Can be extended to include more YouTube channels.  
 
 ---
-
-## 📜 **How to Run This Project**  
-
-### **1️⃣ Clone the Repository:**  
-```bash
-git clone https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPO_NAME.git
-cd YOUR_REPO_NAME
