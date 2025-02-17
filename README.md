@@ -1,6 +1,7 @@
 # **T-Series Data Engineering Analytics** ▶️🎵📊  
 
 ## 📖 **Overview**  
+![Report Home Page](https://github.com/KirandeepMarala/T-Series-Data-Engineering-Analytics/blob/main/Images/dashboard_home_page.png) 
 This project is an **end-to-end data engineering solution** for analyzing YouTube channels under the **T-Series Universe**. It automates data extraction, processing, warehousing, and visualization, providing deep insights into **views, likes, comments, content duration, and top-performing videos**.  
 
 The final output is an interactive **Power BI report**, enabling users to analyze YouTube content trends over different time periods.  
