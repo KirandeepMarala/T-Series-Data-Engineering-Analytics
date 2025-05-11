@@ -66,7 +66,7 @@ This project follows a **fully automated data pipeline** that runs daily at **6:
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✔️ Channel Selection – Analyze data for **6 T-Series channels** individually or collectively.  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✔️ Engagement Metrics – Detailed insights into **views, likes, comments, and content duration (minutes)**.  
 
-  🔗 **Live Interactive Report:** [Click Here to View Power BI Report](https://app.powerbi.com/view?r=eyJrIjoiYTJhYjQyNTAtMDNmYi00ZTQwLWExYjItZWY0MTVjYmY5N2ViIiwidCI6ImM2ZTU0OWIzLTVmNDUtNDAzMi1hYWU5LWQ0MjQ0ZGM1YjJjNCJ9)  
+  🔗 **Live Interactive Report:** [Click Here to View Power BI Report](https://app.powerbi.com/view?r=eyJrIjoiZTY2YjBiNTctMjhhNS00NmRlLWE5ZjMtMDBhZDIwNDlkZmQwIiwidCI6ImM2ZTU0OWIzLTVmNDUtNDAzMi1hYWU5LWQ0MjQ0ZGM1YjJjNCJ9)  
 
 
 ---
